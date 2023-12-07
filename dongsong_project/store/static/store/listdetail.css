@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f8; /* Un fondo claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282828; /* Un tono oscuro para el encabezado */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav a {
+    color: #ffcc00; /* Un color brillante para los enlaces */
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+h2 {
+    color: #282828;
+    text-align: center;
+    padding: 10px 0;
+}
+
+div.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+div.product {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+h3 {
+    color: #444;
+    margin: 0 0 10px;
+}
+
+.product p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.product a {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #282828;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product a:hover {
+    background-color: #ffd700;
+}

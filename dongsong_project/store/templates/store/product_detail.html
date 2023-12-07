@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'listdetail.css' %}">
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p><strong>Descripción:</strong> {{ product.description }}</p>
+    <p><strong>Precio:</strong> ${{ product.price }}</p>
+    <!-- Aquí puedes añadir más detalles como especificaciones, reseñas, etc. -->
+
+    <!-- Enlace para regresar a la lista de productos -->
+    <!-- <a href="{% url 'product_list' %}">Volver a la lista de productos</a> -->
+    <a href="{% url 'product_list' %}">Volver a la lista de productos</a>
+</body>
+</html>

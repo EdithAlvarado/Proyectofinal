@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>DongSong Store - Product List</title>
+    <link rel="stylesheet" href="{% static 'listyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>DongSong Store</h1>
+        <nav>
+            <!-- Puedes añadir más enlaces de navegación aquí si lo necesitas -->
+        </nav>
+    </header>
+    <h2>Productos Disponibles</h2>
+    <div class="product-container"> <!-- Clase añadida para el contenedor de productos -->
+        {% for product in products %}
+            <div class="product"> <!-- Clase añadida para cada producto -->
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>Precio: ${{ product.price }}</p>
+                <a href="{% url 'product_detail' product.pk %}">Ver detalles</a>
+            </div>
+        {% empty %}
+            <p>No hay productos disponibles.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
