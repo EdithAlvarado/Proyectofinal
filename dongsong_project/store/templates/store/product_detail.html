@@ -3,17 +3,60 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ product.name }}</title>
-    <link rel="stylesheet" href="{% static 'listdetail.css' %}">
+    <link rel="stylesheet" href="{% static 'store/listdetail.css' %}">
+    <style>
+        /* Aquí puedes añadir estilos CSS adicionales */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ product.name }}</h1>
-    <p><strong>Descripción:</strong> {{ product.description }}</p>
-    <p><strong>Precio:</strong> ${{ product.price }}</p>
-    <!-- Aquí puedes añadir más detalles como especificaciones, reseñas, etc. -->
+    <header>
+        <h1>{{ product.name }}</h1>
+    </header>
 
-    <!-- Enlace para regresar a la lista de productos -->
-    <!-- <a href="{% url 'product_list' %}">Volver a la lista de productos</a> -->
-    <a href="{% url 'product_list' %}">Volver a la lista de productos</a>
+    <main>
+        <section class="product-details">
+            <h2>Detalles del Producto</h2>
+            <p><strong>Descripción:</strong> {{ product.description }}</p>
+            <p><strong>Precio:</strong> ${{ product.price }}</p>
+            <!-- Aquí puedes añadir más detalles como especificaciones, reseñas, etc. -->
+        </section>
+
+        <!-- Enlace para regresar a la lista de productos -->
+        <nav>
+            <a href="{% url 'product_list' %}">Volver a la lista de productos</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tienda de Productos</p>
+    </footer>
+
+    <script>
+        // Aquí puedes añadir JavaScript para interactividad adicional
+        // Ejemplo: un script simple para confirmar antes de navegar
+        document.querySelector('nav a').addEventListener('click', function(event) {
+            if (!confirm('¿Estás seguro de que quieres volver a la lista de productos?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
