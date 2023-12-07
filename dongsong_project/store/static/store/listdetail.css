@@ -1,13 +1,15 @@
+/* Estilos Base */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f8; /* Un fondo claro */
+    background-color: #f0f0f8; 
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* Encabezado */
 header {
-    background-color: #282828; /* Un tono oscuro para el encabezado */
+    background-color: #282828;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -18,8 +20,9 @@ header h1 {
     font-size: 2em;
 }
 
+/* Navegación */
 nav a {
-    color: #ffcc00; /* Un color brillante para los enlaces */
+    color: #ffcc00;
     text-decoration: none;
     padding: 5px 10px;
     transition: color 0.3s ease;
@@ -29,12 +32,19 @@ nav a:hover {
     color: #ffd700;
 }
 
+/* Títulos y Textos */
 h2 {
     color: #282828;
     text-align: center;
     padding: 10px 0;
 }
 
+h3 {
+    color: #444;
+    margin: 0 0 10px;
+}
+
+/* Contenedor de Productos */
 div.product-container {
     display: flex;
     flex-wrap: wrap;
@@ -42,6 +52,20 @@ div.product-container {
     padding: 20px;
 }
 
+/* Diseño Responsivo para Productos */
+@media screen and (max-width: 768px) {
+    div.product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.product {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Estilo de Productos */
 div.product {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -58,11 +82,7 @@ div.product:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-h3 {
-    color: #444;
-    margin: 0 0 10px;
-}
-
+/* Estilo del Texto y Enlaces de Productos */
 .product p {
     color: #555;
     line-height: 1.6;
